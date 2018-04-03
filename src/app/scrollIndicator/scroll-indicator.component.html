@@ -1,0 +1,87 @@
+
+<ng-scroll-indicator-component style="margin:0!important;width:100%;" [container]="'progressContainer'" [progressbar]="'bar'"></ng-scroll-indicator-component>
+<div ngScrollDirective style="overflow-y:scroll;height:90vh;">
+<div style="padding:50px;">
+<h1> ngx-scroll-indicator </h1>
+
+Angular Directive to highlight the text.
+
+<br>
+<br>
+<h4>Installation</h4>
+<br>
+
+<textarea highlight-js [options]="{}" [lang]="'bash'">
+$ npm install ngx-scroll-indicator --save
+</textarea>
+
+
+<h4>Usage</h4>
+<br>
+Import NgScrollIndicatorModule in the root module
+
+<textarea highlight-js [options]="{}" [lang]="'typescript'">
+    /* tslint:disable */
+    import { NgScrollIndicatorModule } from 'ngx-scroll-indicator';
+
+    @NgModule({
+      imports: [
+        // ...
+        NgScrollIndicatorModule.forRoot(),
+        ...
+      ]
+    })
+</textarea>
+
+<h4>In your template</h4>
+
+<textarea highlight-js [options]="{}" [lang]="'html'">
+  <ng-scroll-indicator-component [container]="'container'" [progressbar]="'bar'"></ng-scroll-indicator-component>
+  <div ngScrollDirective style="height:500px;overflow:scroll;">
+    ....
+    ....
+  </div>
+</textarea>
+
+[container]: string.
+
+  The css class name to be apllied to the container to modift the default style. Define the css class in main style sheet of the application
+<br>
+[progressbar]: string.
+
+  The css class name to be apllied to the container to modift the default style. Define the css class in main style sheet of the application
+<br>
+ngScrollDirective
+
+  Add the directive to the div for which the scroll indicator should track. Specify fixed height to the div and add overflow: scroll paramter to it. 
+
+  ** example css to override the default styling of progress bar **
+
+<textarea highlight-js [options]="{}" [lang]="'css'">
+  .container {
+    background: #ccc !important;
+  }
+  .bar {
+    background: yellow !important;
+  }
+</textarea>
+
+<h5 > </h5>
+<!-- <div class="row">
+  <div class="col-6">
+    test
+  </div>
+  <div class="col-6">
+      test2
+  </div>
+</div> -->
+
+<div >
+  
+</div>
+
+
+
+</div>
+
+</div>

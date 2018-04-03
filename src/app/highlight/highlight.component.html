@@ -1,0 +1,74 @@
+<ng-scroll-indicator-component [container]="'progressContainer'" [progressbar]="'bar'" ></ng-scroll-indicator-component>
+<div ngScrollDirective style="overflow-y:scroll;height:90vh;padding:50px">
+<h1> ngx-text-highlight </h1>
+
+Angular Directive to highlight the text.
+
+<br>
+<br>
+<h4>Installation</h4>
+<br>
+
+<textarea highlight-js [options]="{}" [lang]="'bash'">
+$ npm install ngx-text-highlight --save
+</textarea>
+
+
+<h4>Usage</h4>
+<br>
+Import NgHighlightModule in the root module
+
+<textarea highlight-js [options]="{}" [lang]="'typescript'">
+    /* tslint:disable */
+import { NgHighlightModule } from 'ngx-text-highlight';
+@NgModule({
+  imports: [
+    // ...
+    NgHighlightModule,
+    ...
+  ]
+})
+</textarea>
+
+<h4>In your template</h4>
+
+<textarea highlight-js [options]="{}" [lang]="'html'">
+<div ngxTextHighlight [content]="actualText" [searchTerm]="searchText"  [caseSensitive]="true">
+</div>
+</textarea>
+
+[content]: string.
+
+the content in which the text needs to be highlighted.
+<br>
+[searchTerm]: string.
+
+The string which needs to be highlighted.
+<br>
+[caseSensitive]: boolean.
+
+Toggle between case sensitive and case insensitive search, default false.
+<br>
+** Include the css provided in your index.html or create a css class as shown below as per your requirement **
+
+
+<textarea highlight-js [options]="{}" [lang]="'css'">
+.ngx-text-highlight{
+    background:yellow;
+}
+</textarea>
+
+<h5 >Live Example </h5>
+<div>
+<input type="text" [(ngModel)]="highlight">
+<br>
+<div ngxTextHighlight [content]="actual" [searchTerm]="highlight"></div>
+</div>
+
+<div>
+ <h5>With case sensitive enabled</h5>
+<input type="text" [(ngModel)]="highlight2" >
+<br>
+<div ngxTextHighlight [content]="actual" [searchTerm]="highlight2" [caseSensitive]="true"></div>
+</div>
+</div>

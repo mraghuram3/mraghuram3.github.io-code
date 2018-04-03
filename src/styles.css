@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.progressContainer {
+    margin:0!important;
+    padding:0!important;
+    background: #ccc !important;
+    height:4px !important;
+  }
+  .bar {
+    margin:0!important;
+    padding:0!important;
+    background: yellow !important;
+    height:4px !important;
+  }
