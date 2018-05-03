@@ -1,0 +1,79 @@
+
+<ng-scroll-indicator-component style="margin:0!important;width:100%;" [container]="'progressContainer'" [progressbar]="'bar'"></ng-scroll-indicator-component>
+<div ngScrollDirective style="overflow-y:scroll;height:90vh;">
+<div style="padding:50px;">
+<h1> ngx-date-picker-component </h1>
+
+Angular Date Picker Component.
+<br>
+<br>
+<div style="padding:20px 0px;">
+    <button (click)="mode='dropdown'">Dropdown</button> <button (click)="mode='inline'">Inline</button> 
+    <button (click)="format='DD-MM-YYYY'">DD-MM-YYYY</button> <button (click)="format='DD-MMM-YYYY'">DD-MMM-YYYY</button> <button  (click)="format='DD-MM-YY'">DD-MM-YY</button>
+    <br>
+</div>
+
+
+
+<ngx-date-picker [mode]="mode" [format]="format" (selected)="selectedDate($event)"></ngx-date-picker>
+
+<span *ngIf="date != null "> Selected Date - {{date}} </span>
+<h4>Installation</h4>
+
+To install this library, run:
+
+<textarea highlight-js [options]="{}" [lang]="'bash'">
+$ npm install ngx-date-picker-component --save
+</textarea>>
+
+## Consuming your library
+
+Once you have published your library to npm, you can import your library in any Angular application by running:
+
+<textarea highlight-js [options]="{}" [lang]="'bash'">
+$ npm install ngx-date-picker-component --save
+</textarea>
+
+<h4>Usage</h4>
+<br>
+
+
+Import `NgxDatePickerModule` in the root module
+
+<textarea highlight-js [options]="{}" [lang]="'typescript'">
+    /* tslint:disable */
+import { NgxDatePickerModule } from 'ngx-date-picker-component';
+
+@NgModule({
+  imports: [
+    // ...
+    NgxDatePickerModule,
+    ...
+  ]
+})
+</textarea>
+
+<h4>In your template</h4>
+
+<textarea highlight-js [options]="{}" [lang]="'html'">
+  <ngx-date-picker [mode]="'dropdown'" [format]="'DD-MM-YYYY'" (selected)="selectedDate($event)"></ngx-date-picker>
+</textarea>
+
+<br>
+
+
+<h6>[mode]: string.</h6>
+
+  'dropdown' and 'inline' can be passed to enable respective mode.
+<br><br>
+<h6>[format]: string.</h6>
+
+  To change the date format of the displayed selected date.
+  <br><br>
+<h6>(selected)="selectedDate($event)"</h6>
+
+  On selecting a date e event with the selected date object will be emitted.
+  <br><br>
+
+</div>
+</div>

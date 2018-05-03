@@ -1,12 +1,14 @@
 .text-highlight{
     text-align:center;
     margin:30px;
-    cursor: pointer;
+   
 }
 .dis-inline{
     display: inline-block;
-    padding: 0 0 50px 0px;
+    padding: 0 0 20px 0px;
+    cursor: pointer;
 }
+
 ul {
     list-style-type: none;
   }

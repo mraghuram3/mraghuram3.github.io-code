@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 
 import { NgHighlightModule } from 'ngx-text-highlight';
 import { NgScrollIndicatorModule } from 'ngx-scroll-indicator';
+import { NgxVirtualScrollModule } from 'ngx-virtual-scroll-list';
+import { NgxDatePickerModule } from 'ngx-date-picker-component';
 
 import { HighlightJsModule } from 'ngx-highlight-js';
 
@@ -15,13 +17,19 @@ import { HomeComponent } from './home/home.component';
 import { HighlightComponent } from './highlight/highlight.component';
 import { ScrollIndicatorComponent } from './scrollIndicator/scroll-indicator.component';
 
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+import { VirtualScrollComponent } from './virtual-scroll/virtual-scroll.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HighlightComponent,
-    ScrollIndicatorComponent
+    ScrollIndicatorComponent,
+    VirtualScrollComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,10 @@ import { ScrollIndicatorComponent } from './scrollIndicator/scroll-indicator.com
     AppRoutingModule,
     HighlightJsModule,
     NgHighlightModule,
-    NgScrollIndicatorModule.forRoot()
+    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+    NgScrollIndicatorModule.forRoot(),
+    NgxVirtualScrollModule,
+    NgxDatePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

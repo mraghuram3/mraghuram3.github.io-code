@@ -1,0 +1,115 @@
+<ng-scroll-indicator-component style="margin:0!important;width:100%;" [container]="'progressContainer'" [progressbar]="'bar'"></ng-scroll-indicator-component>
+<div ngScrollDirective style="overflow-y:scroll;height:90vh;">
+<div style="padding:50px;">
+<h1> ngx-virtual-scroll-list </h1>
+
+Angular Directive to add virtual scroll.
+<br>
+<br>
+<div>
+    <div style="width:100%">
+        <div ngxVirtualScroll [items]="data" [minRowHeight]="25" (change)="displayData =$event?.data;actualIndex = $event.startIndex;" class="parent">
+                <div ngxVirtualScrollElement [minRowHeight]="25" *ngFor="let r of displayData;let i = index;" [rangeStart]="actualIndex" [elemIndex]="i">{{r}}</div>
+            </div>
+      
+      </div>
+</div>
+
+
+<br>
+<h4>Installation</h4>
+
+To install this library, run:
+
+<textarea highlight-js [options]="{}" [lang]="'bash'">
+$ npm install ngx-virtual-scroll-list --save
+</textarea>>
+
+## Consuming your library
+
+Once you have published your library to npm, you can import your library in any Angular application by running:
+
+<textarea highlight-js [options]="{}" [lang]="'bash'">
+$ npm install ngx-virtual-scroll-list --save
+</textarea>
+
+<h4>Usage</h4>
+<br>
+
+
+Import `NgxVirtualScrollModule` in the root module
+
+<textarea highlight-js [options]="{}" [lang]="'typescript'">
+    /* tslint:disable */
+import { NgxVirtualScrollModule } from 'ngx-text-highlight';
+
+@NgModule({
+  imports: [
+    // ...
+    NgxVirtualScrollModule.forRoot(),
+    ...
+  ]
+})
+</textarea>
+
+<h4>In your template</h4>
+
+<textarea highlight-js [options]="{}" [lang]="'html'">
+<div ngxVirtualScroll [items]="data" [minRowHeight]="25" (change)="displayData =$event?.data;actualIndex = $event.startIndex;" class="parent">
+
+    <div ngxVirtualScrollElement [minRowHeight]="25" *ngFor="let row of displayData;let i = index;" [rangeStart]="actualIndex" [elemIndex]="i">
+
+      {{row}}
+      
+    </div>
+</div>
+</textarea>
+
+<br>
+
+<h6>ngxVirtualScroll</h6>
+
+  Add the directive to the div or other dom in which the elemnts are to be loaded 
+
+ <br><br>
+<h6>[items]: any[].</h6>
+
+  The data which is populated on the virtual scroll list
+<br><br>
+<h6>[minRowHeight]: number.</h6>
+
+  The minimum height of the row in pixels.
+  <br><br>
+<h6>(change)="displayData =$event?.data;actualIndex = $event.startIndex"</h6>
+
+  create two variables displayData an array and startIndex an number and initialize as shown below which will be updated automaically on scrolling.
+  <br><br>
+
+
+<textarea highlight-js [options]="{}" [lang]="'html'">
+displayData = [];
+actualIndex = 0;
+.....
+......
+</textarea>
+
+<h6>ngxVirtualScrollElement</h6>
+
+  Add the directive to the div for row elements of the virtual scroll.
+<br><br>
+
+<h6>[minRowHeight]: number.
+</h6>
+  The minimum height of the row in pixels.
+  <br><br>
+
+<h6>[rangeStart]: number.</h6>
+
+  Pass the data from change event.
+<br><br>
+  ** include other inputs in ngxVirtualScrollElement row, like ngFor and [elemIndex] ** <br><br>
+
+
+
+</div>
+</div>

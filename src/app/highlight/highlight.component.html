@@ -6,6 +6,19 @@ Angular Directive to highlight the text.
 
 <br>
 <br>
+<h5 >Live Example </h5>
+<div>
+<input type="text" [(ngModel)]="highlight">
+<br>
+<div ngxTextHighlight [content]="actual" [searchTerm]="highlight"></div>
+</div>
+
+<div>
+ <h5>With case sensitive enabled</h5>
+<input type="text" [(ngModel)]="highlight2" >
+<br>
+<div ngxTextHighlight [content]="actual" [searchTerm]="highlight2" [caseSensitive]="true"></div>
+</div>
 <h4>Installation</h4>
 <br>
 
@@ -58,17 +71,5 @@ Toggle between case sensitive and case insensitive search, default false.
 }
 </textarea>
 
-<h5 >Live Example </h5>
-<div>
-<input type="text" [(ngModel)]="highlight">
-<br>
-<div ngxTextHighlight [content]="actual" [searchTerm]="highlight"></div>
-</div>
 
-<div>
- <h5>With case sensitive enabled</h5>
-<input type="text" [(ngModel)]="highlight2" >
-<br>
-<div ngxTextHighlight [content]="actual" [searchTerm]="highlight2" [caseSensitive]="true"></div>
-</div>
 </div>
