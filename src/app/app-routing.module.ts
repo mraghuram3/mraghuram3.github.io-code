@@ -7,6 +7,8 @@ import { HighlightComponent } from './highlight/highlight.component';
 import { ScrollIndicatorComponent } from './scrollIndicator/scroll-indicator.component';
 import { VirtualScrollComponent } from './virtual-scroll/virtual-scroll.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { ResizeComponent } from './resize/resize.component';
+import { ReorderComponent } from './reorder/reorder.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
     { path: 'ngx-scroll-indicator', component: ScrollIndicatorComponent },
     { path: 'ngx-virtual-scroll-list', component: VirtualScrollComponent },
     { path: 'ngx-date-picker-component', component: DatePickerComponent },
+    { path: 'ngx-resizer', component: ResizeComponent },
+    { path: 'ngx-reorder', component: ReorderComponent },
     { path: '**', redirectTo: 'home' }
 ];
 

@@ -10,6 +10,7 @@ import { NgHighlightModule } from 'ngx-text-highlight';
 import { NgScrollIndicatorModule } from 'ngx-scroll-indicator';
 import { NgxVirtualScrollModule } from 'ngx-virtual-scroll-list';
 import { NgxDatePickerModule } from 'ngx-date-picker-component';
+import { NgxResizeModule } from 'ngx-resizer';
 
 import { HighlightJsModule } from 'ngx-highlight-js';
 
@@ -21,6 +22,8 @@ import { Angulartics2Module } from 'angulartics2';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 import { VirtualScrollComponent } from './virtual-scroll/virtual-scroll.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { ResizeComponent } from './resize/resize.component';
+import { ReorderComponent } from './reorder/reorder.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     HighlightComponent,
     ScrollIndicatorComponent,
     VirtualScrollComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    ResizeComponent,
+    ReorderComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     NgHighlightModule,
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
     NgScrollIndicatorModule.forRoot(),
+    NgxResizeModule.forRoot(),
     NgxVirtualScrollModule,
     NgxDatePickerModule
   ],
