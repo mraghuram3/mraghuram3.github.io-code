@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReorderComponent implements OnInit {
 
-  constructor() { }
+  dataSort = [];
+
+  target = -1;
+  startIndex  = -1;
+  r: any;
+  constructor() {
+    for (let i = 0; i < 5; i++) {
+      this.dataSort.push({index: i, text: 'data' + i});
+    }
+  }
 
   ngOnInit() {
   }

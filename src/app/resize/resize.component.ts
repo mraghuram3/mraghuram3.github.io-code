@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ResizeComponent implements OnInit {
 
 
-  width = 300;
+  width = 350;
   height = 200;
-  top = 120;
+  top = 50;
   left = 200;
 
   constructor() { }

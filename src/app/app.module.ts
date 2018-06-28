@@ -11,7 +11,7 @@ import { NgScrollIndicatorModule } from 'ngx-scroll-indicator';
 import { NgxVirtualScrollModule } from 'ngx-virtual-scroll-list';
 import { NgxDatePickerModule } from 'ngx-date-picker-component';
 import { NgxResizeModule } from 'ngx-resizer';
-
+import { NgxReoderModule } from 'ngx-reorder';
 import { HighlightJsModule } from 'ngx-highlight-js';
 
 import { HomeComponent } from './home/home.component';
@@ -45,6 +45,7 @@ import { ReorderComponent } from './reorder/reorder.component';
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
     NgScrollIndicatorModule.forRoot(),
     NgxResizeModule.forRoot(),
+    NgxReoderModule,
     NgxVirtualScrollModule,
     NgxDatePickerModule
   ],

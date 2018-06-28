@@ -1,8 +1,117 @@
 
-<div appNgxResize [resizeId]="'test1'"  class="resizeable" [width]="width" [height]="height" [left]="left" [top]="top">
-  test
-  <div appNgxResizeRight [resizeId]="'test1'" ></div>
-  <div appNgxResizeLeft [resizeId]="'test1'" ></div>
-  <div appNgxResizeTop [resizeId]="'test1'" ></div>
-  <div appNgxResizeBottom [resizeId]="'test1'" ></div>
+
+<ng-scroll-indicator-component style="margin:0!important;width:100%;" [container]="'progressContainer'" [progressbar]="'bar'"></ng-scroll-indicator-component>
+<div ngScrollDirective style="overflow-y:scroll;height:90vh;">
+<div style="padding:50px;">
+<h1> ngx-resizer </h1>
+
+Angular Directive to make elements resizeable.
+<br>
+<br>
+<div style="position: relative;height:350px;width:100%;">
+  <!-- <div ngxResize [resizeId]="'test1'"  class="resizeable" [width]="width" [height]="height" [left]="left" [top]="top">
+    test
+    <div ngxResizeRight [resizeId]="'test1'" ></div>
+    <div ngxResizeLeft [resizeId]="'test1'" ></div>
+    <div ngxResizeTop [resizeId]="'test1'" ></div>
+    <div ngxResizeBottom [resizeId]="'test1'" ></div>
+  </div> -->
+
+  <div ngxResize [resizeId]="'test2'"  class="resizeables" [width]="width" [height]="height" [left]="left" [top]="top">
+    Resize this div by Dragging from edges.
+    <div ngxResizeRight [resizeId]="'test2'" ></div>
+    <div ngxResizeLeft [resizeId]="'test2'" ></div>
+    <div ngxResizeTop [resizeId]="'test2'" ></div>
+    <div ngxResizeBottom [resizeId]="'test2'" ></div>
+  </div>
+  
+  
+</div>
+
+
+<br>
+<h4>Installation</h4>
+
+To install this library, run:
+
+<textarea highlight-js [options]="{}" [lang]="'bash'">
+$ npm install ngx-resizer --save
+</textarea>
+
+<h4>Usage</h4>
+<br>
+
+
+Import `NgxResizeModule` in the root module
+
+<textarea highlight-js [options]="{}" [lang]="'typescript'">
+    /* tslint:disable */
+import { NgxResizeModule } from 'ngx-resizer';
+
+@NgModule({
+  imports: [
+    // ...
+    NgxResizeModule.forRoot(),
+    ...
+  ]
+})
+</textarea>
+
+<h4>In your template</h4>
+
+<textarea highlight-js [options]="{}" [lang]="'html'">
+  <div ngxResize [resizeId]="'test1'"  class="resizeable" [width]="width" [height]="height" [left]="left" [top]="top">
+    test
+    <div ngxResizeRight [resizeId]="'test1'" ></div>
+    <div ngxResizeLeft [resizeId]="'test1'" ></div>
+    <div ngxResizeTop [resizeId]="'test1'" ></div>
+    <div ngxResizeBottom [resizeId]="'test1'" ></div>
+  </div>
+</textarea>
+
+<br>
+
+<h6>ngxResize</h6>
+
+  Add the directive to the div or other dom elemnts which is to be made into resizeable.
+ <br><br>
+ <h6>ngxResizeRight</h6>
+
+  To enable resizeable on right side of the element.
+ <br><br>
+ <h6>ngxResizeLeft</h6>
+
+ To enable resizeable on left side of the element.
+ <br><br>
+ <h6>ngxResizeTop</h6>
+
+ To enable resizeable on top side of the element.
+ <br><br>
+ <h6>ngxResizeBottom</h6>
+
+ To enable resizeable on bottom side of the element.
+ <br><br>
+<h6>[resizeId]: string</h6>
+
+  Pass same id to the reiszeable eleemnts and handels. 
+<br><br>
+
+<h6>[width]: number.
+</h6>
+  to set the width of the element in pixels.
+  <br><br>
+<h6>[height]: number.</h6>
+
+to set the height of the element in pixels.
+<br><br>
+<h6>[top]: number.
+</h6>
+to set the top of the element in pixels.
+  <br><br>
+
+<h6>[left]: number.</h6>
+
+to set the left of the element in pixels.
+<br><br>
+</div>
 </div>

@@ -1,3 +1,105 @@
-<p>
-  reorder works!
-</p>
+<ng-scroll-indicator-component style="margin:0!important;width:100%;" [container]="'progressContainer'" [progressbar]="'bar'"></ng-scroll-indicator-component>
+<div ngScrollDirective style="overflow-y:scroll;height:90vh;">
+<div style="padding:50px;">
+<h1> ngx-reorder </h1>
+
+Angular Directive To Reorder Elements.
+
+    <div style="width:100%">
+            <div class="dragParn" ngxReorder [items]="dataSort" (sortedData)="dataSort = $event;" (dropTarget)="target = $event;" (dragStart)="startIndex = $event;">
+              <div class="drag" ngxReorderElement *ngFor="let r of dataSort;let i = index" [index]="i" [ngClass]="{'border':target == i,'opacity':startIndex == i}"> {{r.text}}</div>
+            </div>
+            
+      </div>
+
+
+<h4>Installation</h4>
+
+To install this library, run:
+
+<textarea highlight-js [options]="{}" [lang]="'bash'">
+$ npm install ngx-reorder --save
+</textarea>>
+
+## Consuming your library
+
+Once you have published your library to npm, you can import your library in any Angular application by running:
+
+<h4>Usage</h4>
+<br>
+
+Import `NgxReoderModule` in the root module
+
+<textarea highlight-js [options]="{}" [lang]="'typescript'">
+    /* tslint:disable */
+import { NgxReoderModule } from 'ngx-reorder';
+
+@NgModule({
+  imports: [
+    // ...
+    NgxReoderModule,
+    ...
+  ]
+})
+</textarea>
+
+<h4>In your template</h4>
+
+<textarea highlight-js [options]="{}" [lang]="'html'">
+  <div class="dragParn" ngxReorder [items]="dataSort" (sortedData)="dataSort = $event;" (dropTarget)="target = $event;" (dragStart)="startIndex = $event;">
+    <div class="drag" ngxReorderElement *ngFor="let r of dataSort;let i = index" [index]="i" [ngClass]="{'border':target == i,'opacity':startIndex == i}"> {{r?.text}}</div>
+  </div>
+</textarea>
+
+<br>
+
+<h6>ngxReorder</h6>
+
+  Add the directive to the div or other dom in which the elemnts are to be Reordered 
+
+ <br><br>
+<h6>[items]: any[].</h6>
+
+  The data which are to be sorted.
+<br><br>
+<!-- <h6>[minRowHeight]: number.</h6>
+
+  The minimum height of the row in pixels.
+  <br><br> -->
+<h6>(sortedData)="dataSort = $event;"</h6>
+
+  Whenever the elements are reorderd the sorted data output is fired and the data int he array is updated.
+  <br><br>
+<h6>(dropTarget)="target = $event;"</h6>
+  Target index to apply css class to the target element.
+ <br><br>
+<h6> (dragStart)="startIndex = $event;"</h6>
+
+  Start Index is the elements which is being dragged, to apply css.
+  <br><br>
+
+<textarea highlight-js [options]="{}" [lang]="'html'">
+target = -1;
+startIndex = -1;
+.....
+......
+</textarea>
+
+<h6>ngxReorderElement</h6>
+
+  Add the directive to the div for row elements which are to be reorderd.
+<br><br>
+
+<h6>[index]: number.
+</h6>
+   to uniquely identify the elements.
+  <br><br>
+
+
+<br><br>
+  ** include other inputs in ngxReorderElement row, like ngFor, index and [ngClass] ** <br><br>
+
+
+
+</div>
+</div>

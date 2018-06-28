@@ -5,3 +5,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.resizeables{
+    background: lightblue;
+    border: 1px solid lightgrey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
